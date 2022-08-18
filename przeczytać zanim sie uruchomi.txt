@@ -1,0 +1,2 @@
+w terminalu wpisac npm run devStart
+i wejsc na localhost 3000

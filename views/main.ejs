@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="form">
+            <h2>Dodaj użytkownika:</h2>
+            <form action="/add" method="POST">
+                
+                User:<input type="text" name="name"><br>
+                wiek:<input type="text" name="wiek"><br>
+
+                <button type="submit" value="submit" >dodaj</button>
+            </form>
+        </div>
+        <div class="form">
+            <h2>Usuń użytkownika:</h2>
+            <form action="/delete" method="POST">
+                
+                id:<input type="text" name="_id"><br>
+            
+
+            <button type="submit" value="submit" >usun</button>
+        </form>
+        </div>
+        <div style="clear:both"></div>
+        <h2>Lista użytkowników</h2>
+        <table  >
+            <tr><td><strong>id</strong></td><td><strong>user</strong></td><td><strong>age</strong></td></tr>
+            <% data.forEach(function(dat) { %>
+                <tr><td><%= dat._id %></td><td> <%= dat.name %></td><td> <%= dat.age %></td> </tr>
+              
+            <% }); %>
+            </table>
+    </section>
+</body>
+</html>
